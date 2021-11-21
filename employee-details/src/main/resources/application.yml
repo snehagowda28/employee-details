@@ -1,0 +1,26 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, beans, metrics
+  endpoint:
+    health:
+      show-details: never
+
+logging:
+  level:
+    web: INFO
+    com.flightapp: DEBUG
+
+server:
+  port: 8080
+  servlet:
+    context-path: '/api'
+
+spring:
+  application:
+    name: employee-details
+
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true
